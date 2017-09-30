@@ -1,0 +1,13 @@
+{% extends 'toader/base.html' %}
+
+{% block content %}
+	{% for person in persons %}
+		<div class="post">
+			<div class="date">
+				<p>user: {{ person.fullname }}</p>
+			</div>
+			<h1>{{ person.age }}</h1>
+			<p>{{ person.reading_now }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}
