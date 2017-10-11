@@ -12,6 +12,8 @@ class Books(models.Model):
 	
 	def __unicode__(self):
 		return unicode(self.book_title)
+	def __str__(self):
+		return self.book_title
 
 class People(models.Model):
 	fullname = models.CharField(max_length=200)
