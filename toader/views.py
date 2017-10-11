@@ -24,3 +24,5 @@ def user_front(request):
 	#return HttpResponse(html)
 	return render(request, 'toader/user_front.html', {'person':person, 'mr':mr} )
 	
+
+	

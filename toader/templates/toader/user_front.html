@@ -7,6 +7,7 @@
 		</div>
 		<p>age : {{ person.age }}</p>
 		<p>currently reading:{{ mr}}</p>
-		<p> For now, refresh to see new profile </p>
+		<a class="btn btn-default top-menu" href="{% url 'user_front' %}"><span class="glyphicon glyphicon-ok"></span></a>
+		<a class="btn btn-default top-menu" href="{% url 'user_front' %}"><span class="glyphicon glyphicon-remove"></span></a>
 	</div>
 {% endblock %}
