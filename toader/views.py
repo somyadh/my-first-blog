@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Books,People,Myself
 from django.http import HttpResponse
 from random import randint
@@ -22,7 +22,9 @@ def user_front(request):
 	person = filtered_list[slice]
 	#html = "<html><body>It is now %s. </body></html>" % persons
 	#return HttpResponse(html)
-	return render(request, 'toader/user_front.html', {'person':person, 'mr':mr} )
-	
+	if request.user.is_authenticated:
+		return render(request, 'toader/user_front.html', {'person':person, 'mr':mr} )
+	else:
+		return redirect('login')
 
 	
